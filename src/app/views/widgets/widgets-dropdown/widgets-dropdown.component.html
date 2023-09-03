@@ -1,0 +1,36 @@
+<c-row>
+  <c-col sm="6" xl="3">
+    <c-widget-stat-a class="mb-4" color="primary" title="Nombre d'utilisateur">
+      <ng-template cTemplateId="widgetValueTemplate" ngPreserveWhitespaces>
+        6
+        <!-- <span class="fs-6 fw-normal">
+          (-12.4% <svg cIcon name="cilArrowBottom"></svg>)
+        </span> -->
+      </ng-template>
+    </c-widget-stat-a>
+  </c-col>
+  <c-col sm="6" xl="3">
+    <c-widget-stat-a [title]="'Déclaration de perte'" class="mb-4" color="info">
+      <ng-template cTemplateId="widgetValueTemplate" ngPreserveWhitespaces>
+        <span>2</span>
+        <!-- <span class="fs-6 fw-normal">
+          (40.9%<svg cIcon name="cilArrowTop"></svg>)
+        </span> -->
+      </ng-template>
+    </c-widget-stat-a>
+  </c-col>
+  <c-col sm="6" xl="3">
+    <c-widget-stat-a [title]="'Accident'" class="mb-4" color="warning">
+      <ng-template cTemplateId="widgetValueTemplate" ngPreserveWhitespaces>
+        <span>1</span>
+      </ng-template>
+    </c-widget-stat-a>
+  </c-col>
+  <c-col sm="6" xl="3">
+    <c-widget-stat-a [title]="'vol'" class="mb-4" color="danger">
+      <ng-template cTemplateId="widgetValueTemplate" ngPreserveWhitespaces>
+        <span>3</span>
+      </ng-template>
+    </c-widget-stat-a>
+  </c-col>
+</c-row>

@@ -1,0 +1,61 @@
+<c-row>
+  <c-card class="mb-4">
+    <c-card-header>Nouvelle incident</c-card-header>
+    <c-card-body>
+      <form cForm>
+        <div class="mb-3">
+          <c-dropdown>
+            <button cButton color="secondary" variant="outline">
+              Type d'incident
+            </button>
+            <button split cButton cDropdownToggle color="secondary" variant="outline">
+              <span class="visually-hidden">Toggle Dropdown</span>
+            </button>
+            <div cDropdownMenu>
+              <a [routerLink] cDropdownItem>Vol</a>
+              <a [routerLink] cDropdownItem>Accident</a>
+              <a [routerLink] cDropdownItem>Perte</a>
+            </div>
+          </c-dropdown>
+          <input aria-label="Text input with segmented dropdown button" cFormControl />
+        </div>
+        <div class="mb-3">
+          <label cLabel for="exampleFormControlTextarea1">Description</label>
+          <textarea cFormControl id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+        <button cButton color="primary">Déclarer</button>
+      </form>
+    </c-card-body>
+  </c-card>
+</c-row>
+<c-row>
+  <c-col xs>
+    <c-card class="mb-4">
+      <c-card-header>Incidents</c-card-header>
+      <c-card-body>
+        <table [hover]="true" [responsive]="true" [striped]="true" align="middle" cTable class="mb-0 border">
+          <thead cTableColor="light">
+            <tr>
+              <th>Type d'incident</th>
+              <th class="text-center">Date de déclaration</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let user of users; index as i">
+              <td>
+                <div>{{ user.type }}</div>
+              </td>
+              <td class="text-center">
+                <div>{{user.declaration | date}}</div>
+              </td>
+              <td>
+                <div>{{user.description}}</div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </c-card-body>
+    </c-card>
+  </c-col>
+</c-row>

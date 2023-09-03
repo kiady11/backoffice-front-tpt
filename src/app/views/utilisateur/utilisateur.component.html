@@ -1,0 +1,42 @@
+<c-row>
+  <c-col xs>
+    <c-card class="mb-4">
+      <c-card-header>Users</c-card-header>
+      <c-card-body>
+        <table [hover]="true" [responsive]="true" [striped]="true" align="middle" cTable class="mb-0 border">
+          <thead cTableColor="light">
+            <tr>
+              <th>Nom</th>
+              <th class="text-center">Mail</th>
+              <th>Naissance</th>
+              <th class="text-center">Numéro</th>
+              <!-- <th>Activity</th> -->
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let user of users; index as i">
+              <td>
+                <div>{{ user.name }}</div>
+              </td>
+              <td class="text-center">
+                <div>{{ user.mail }}</div>
+              </td>
+              <td>
+                <div class="d-flex justify-content-between">
+                  <div>{{ user.naissance }}</div>
+                </div>
+              </td>
+              <td class="text-center">
+                <div>{{ user.numero }}</div>
+              </td>
+              <!-- <td>
+                <div class="small text-medium-emphasis">Last login</div>
+                <div class="fw-semibold text-nowrap">{{ user.activity }}</div>
+              </td> -->
+            </tr>
+          </tbody>
+        </table>
+      </c-card-body>
+    </c-card>
+  </c-col>
+</c-row>
