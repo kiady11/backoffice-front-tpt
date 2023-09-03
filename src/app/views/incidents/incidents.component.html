@@ -4,7 +4,7 @@
     <c-card-body>
       <form cForm>
         <div class="mb-3">
-          <c-dropdown>
+          <!-- <c-dropdown>
             <button cButton color="secondary" variant="outline">
               Type d'incident
             </button>
@@ -16,14 +16,21 @@
               <a [routerLink] cDropdownItem>Accident</a>
               <a [routerLink] cDropdownItem>Perte</a>
             </div>
-          </c-dropdown>
-          <input aria-label="Text input with segmented dropdown button" cFormControl />
+          </c-dropdown> -->
+          <select cFormControl name="type" [(ngModel)]="data.type">
+            <option value="Vol">Vol</option>
+            <option value="Perte">Perte</option>
+            <option value="Accident">Accident</option>
+          </select>
+          <!-- <input [(ngModel)]="data.type" name="type" aria-label="Text input with segmented dropdown button"
+            cFormControl /> -->
         </div>
         <div class="mb-3">
           <label cLabel for="exampleFormControlTextarea1">Description</label>
-          <textarea cFormControl id="exampleFormControlTextarea1" rows="3"></textarea>
+          <textarea [(ngModel)]="data.description" name="description" cFormControl id="exampleFormControlTextarea1"
+            rows="3"></textarea>
         </div>
-        <button cButton color="primary">Déclarer</button>
+        <button cButton (click)="add()" color="primary">Déclarer</button>
       </form>
     </c-card-body>
   </c-card>

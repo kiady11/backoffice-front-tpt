@@ -36,11 +36,6 @@ export class LoginComponent {
 
   connexion() {
     if(this.userInput.mail === this.user.mail && this.userInput.password === this.user.password) {
-      console.log('userInput ', this.userInput)
-      console.log('user ', this.user)
-      console.log(this.userInput.mail === this.user.mail)
-      console.log(this.userInput.password === this.user.password)
-      console.log(    (this.userInput.mail === this.user.mail && this.userInput.password === this.user.password)         )
       this.route.navigateByUrl('/dashboard');
     } else {
       this.route.navigateByUrl('/404');

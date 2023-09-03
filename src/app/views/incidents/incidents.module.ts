@@ -16,7 +16,7 @@ import {
   TabsModule,
 } from '@coreui/angular';
 import { IconModule } from '@coreui/icons-angular';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ChartjsModule } from '@coreui/angular-chartjs';
 import { WidgetsModule } from '../widgets/widgets.module';
 
@@ -33,6 +33,7 @@ import { WidgetsModule } from '../widgets/widgets.module';
     ReactiveFormsModule,
     ButtonModule,
     FormModule,
+    FormsModule,
     ButtonModule,
     ButtonGroupModule,
     ChartjsModule,
