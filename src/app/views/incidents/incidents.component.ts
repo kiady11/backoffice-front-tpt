@@ -146,7 +146,7 @@ export class IncidentsComponent {
       avatar: './assets/img/avatars/1.jpg',
       status: 'success',
       color: 'success',
-      declaration: new Date(),
+      declaration: new Date('01/01/2023'),
       description:'',
       type: 'vol'
     },
@@ -162,7 +162,7 @@ export class IncidentsComponent {
       avatar: './assets/img/avatars/2.jpg',
       status: 'danger',
       color: 'info',
-            declaration: new Date(),
+            declaration: new Date('03/15/2022'),
       description:'',
       type: 'accident'
     },
@@ -178,7 +178,7 @@ export class IncidentsComponent {
       avatar: './assets/img/avatars/3.jpg',
       status: 'warning',
       color: 'warning',
-            declaration: new Date(),
+            declaration: new Date('05/15/2022'),
       description:'',
       type: 'vol'
     },
@@ -194,7 +194,7 @@ export class IncidentsComponent {
       avatar: './assets/img/avatars/4.jpg',
       status: 'secondary',
       color: 'danger',
-            declaration: new Date(),
+            declaration: new Date('05/20/2023'),
       description:'',
       type: 'vol'
     },
@@ -210,7 +210,7 @@ export class IncidentsComponent {
       avatar: './assets/img/avatars/5.jpg',
       status: 'success',
       color: 'primary',
-            declaration: new Date(),
+            declaration: new Date('07/04/2023'),
       description:'',
       type: 'perte'
     },
@@ -226,7 +226,7 @@ export class IncidentsComponent {
       avatar: './assets/img/avatars/6.jpg',
       status: 'info',
       color: 'dark',
-            declaration: new Date(),
+            declaration: new Date('07/23/2023'),
       description:'',
       type: 'perte'
     }
@@ -271,6 +271,15 @@ export class IncidentsComponent {
     })
 
     localStorage.setItem("users", JSON.stringify(this.users));
+
+  }
+
+  delete(user: any) {
+    this.remove(user);
+  }
+
+  remove(user: any) {
+    this.users.splice(user, 1);
 
   }
 

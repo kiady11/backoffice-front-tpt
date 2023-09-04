@@ -46,6 +46,7 @@
               <th>Type d'incident</th>
               <th class="text-center">Date de déclaration</th>
               <th>Description</th>
+              <th>Action</th>
             </tr>
           </thead>
           <tbody>
@@ -58,6 +59,9 @@
               </td>
               <td>
                 <div>{{user.description}}</div>
+              </td>
+              <td>
+                <button cButton (click)="delete(user.name)" color="danger">Supprimer</button>
               </td>
             </tr>
           </tbody>
